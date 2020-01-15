@@ -1,0 +1,22 @@
+@import "~bootstrap/scss/bootstrap";
+
+#colours {
+
+  ul {
+    // display: flex;
+    // justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    li {
+      list-style-type: none;
+      border-radius: 50px;
+      width: 25px;
+      color: rgba($color: #000000, $alpha: 0);
+      margin: 0.2em;
+
+    }
+  }
+
+}
