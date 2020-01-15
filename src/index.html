@@ -14,18 +14,27 @@
     <div class="card">
       <div class="card-body">
 
-        <div class="row ">
-          <h2 class="card-title">HICKIES Originals</h2>
-        </div>
-        <div class="row">
-          <div class="col-sm">*****</div>
-          <div class="col-sm">1,293 reviews</div>
+        <div class="row title">
+          <h1 class="card-title">HICKIES Originals</h1>
         </div>
 
-        <div class="row">
-          <h3 class="col-sm">$14.99</h3>
-          <span class="col-sm">$17.99</span class="col-sm">
-          <span class="col-sm">26% OFF</span class="col-sm">
+        <div class="row ratings">
+          <div class="col-sm">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="col-sm text-muted">1,293 reviews</div>
+        </div>
+
+        <div class="row price">
+          <h3 class="">$14.99</h3>
+          <div class="text-muted ">
+            <span class="">$17.99</span>
+            <span class="">26% OFF</span>
+          </div>
         </div>
 
         <div class="row">
@@ -33,7 +42,7 @@
         </div>
 
         <div class="row">
-          <strong> COLOR:</strong>
+          <strong> COLOR:&nbsp;</strong>
           <span class="selectedColourName"></span>
         </div>
         <div class="row">
@@ -41,11 +50,15 @@
         </div>
 
         <div class="row">
-          Size guide
+          <strong>
+            Size guide
+          </strong>
         </div>
 
         <div class="row">
-          Your Custom Fit
+          <strong>
+            Your Custom Fit
+          </strong>
         </div>
 
         <div class="row">
@@ -57,17 +70,23 @@
           </button>
         </div>
 
-        <div class="row">
-          Details
+        <div class="row details">
+          <strong>
+            DETAILS
+          </strong>
         </div>
 
         <div class="row">
-          Need Help?
+          <strong>
+            Need Help?
+          </strong>
         </div>
 
 
         <div class="row">
-          Shipping &amp; Returns
+          <strong>
+            Shipping &amp; Returns
+          </strong>
         </div>
 
       </div>
@@ -79,26 +98,17 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-
             <h3>Please add the quantity of the item you have selected</h3>
-
           </div>
           <div class="modal-body">
-
             <div>
               <span class="selectedColourName"></span>
-
-              <div>
-                <button>-</button>
-                <span>count</span>
-                <button>0</button>
-
-              </div>
+              <div id="quantity-controls">x</div>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-success">Agree</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
           </div>
         </div>
       </div>
