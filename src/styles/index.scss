@@ -2,24 +2,39 @@
 
 $radius: 60px;
 
-h1 {
-	font-weight: 600;
-}
+.card-body {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
 
-.ratings {
-	width: 50%;
-	margin-bottom: 1rem;
-}
-
-.price {
-	h3 {
-		margin-right: 5.5rem;
-		color: crimson;
+	h1 {
+		font-weight: 600;
 	}
-}
 
-#colours {
-	width: 100%;
+	.ratings {
+		width: 50%;
+		margin-bottom: 1rem;
+	}
+
+	.online {
+		padding: 1rem;
+	}
+
+	.wrap {
+		width: 8rem;
+	}
+
+	.price {
+		h3 {
+			color: crimson;
+		}
+		span {
+			margin-right: 3rem;
+		}
+	}
+
+	#colours {
+		width: 100%;
+	}
 
 	ul {
 		display: flex;
@@ -42,20 +57,41 @@ h1 {
 			&.selected {
 				padding: 2px;
 				border-radius: $radius;
-				border: 2px solid black;
+				border: 2px solid gray;
 			}
 		}
 	}
-}
 
-.details {
-	border-top: 2px solid black;
-	border-bottom: 2px solid black;
-	padding: 1rem;
-}
+	.details {
+		border-top: 2px solid black;
+		border-bottom: 2px solid black;
+		padding: 1rem;
+	}
 
-.modal {
-	.increment-buttons {
-		display: inline-block;
+	.size,
+	.fit {
+		padding: 0.5rem;
+	}
+
+	.add {
+		div {
+			border: 1px solid black;
+			border-radius: $radius;
+			padding: 1rem 2rem;
+			margin-right: 1rem;
+		}
+		button {
+			border-radius: $radius;
+			background-color: black;
+			padding: 1rem 8rem;
+			font-weight: 500;
+		}
+		margin-bottom: 2rem;
+	}
+
+	.modal {
+		.increment-buttons {
+			display: inline-block;
+		}
 	}
 }

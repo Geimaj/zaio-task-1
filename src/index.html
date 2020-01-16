@@ -19,25 +19,29 @@
         </div>
 
         <div class="row ratings">
-          <div class="col-sm">
+          <div class=" wrap">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
           </div>
-          <div class="col-sm text-muted">1,293 reviews</div>
+          <div class="text-muted">
+            <span>1,293 reviews</span>
+          </div>
         </div>
 
         <div class="row price">
-          <h3 class="">$14.99</h3>
-          <div class="text-muted ">
-            <span class="">$17.99</span>
-            <span class="">26% OFF</span>
+          <div class="col-sm1 wrap">
+            <h3 >$14.99</h3>
+          </div>
+          <div class="text-muted">
+            <span>$17.99</span>
+            <span>26% OFF</span>
           </div>
         </div>
 
-        <div class="row">
+        <div class="row online">
           ONLINE EXCLUSIVE
         </div>
 
@@ -49,24 +53,29 @@
           <div id="colours"></div>
         </div>
 
-        <div class="row">
+        <div class="row size">
           <strong>
             Size guide
           </strong>
         </div>
 
-        <div class="row">
+        <div class="row fit">
           <strong>
             Your Custom Fit
           </strong>
         </div>
 
-        <div class="row">
+        <div class="row add">
           <div>
-            0
+            <strong id="productCount">
+              0
+            </strong>
           </div>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">
-            Add to Cart
+          <button id="addToCart" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">
+            
+            <strong>
+              Add to Cart
+            </strong>
           </button>
         </div>
 
@@ -74,6 +83,9 @@
           <strong>
             DETAILS
           </strong>
+          <div id="details">
+
+          </div>
         </div>
 
         <div class="row">
@@ -107,8 +119,8 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success">Agree</button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            <button id="quantity-accept" type="button" class="btn btn-success">Agree</button>
+            <button id="quantity-cancel" type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
           </div>
         </div>
       </div>
