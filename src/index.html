@@ -1,137 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Colours</title>
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Colours</title>
-</head>
+	<body>
+		<div class="container">
+			<div class="card">
+				<div class="card-body">
+					<div class="row title">
+						<h1 class="card-title">HICKIES Originals</h1>
+					</div>
 
-<body>
-  <div class="container">
+					<div class="row ratings">
+						<div class=" wrap">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+						</div>
+						<div class="text-muted">
+							<span>1,293 reviews</span>
+						</div>
+					</div>
 
-    <div class="card">
-      <div class="card-body">
+					<div class="row price">
+						<div class="col-sm1 wrap">
+							<h3>$14.99</h3>
+						</div>
+						<div class="text-muted">
+							<span>$17.99</span>
+							<span>26% OFF</span>
+						</div>
+					</div>
 
-        <div class="row title">
-          <h1 class="card-title">HICKIES Originals</h1>
-        </div>
+					<div class="row online">
+						ONLINE EXCLUSIVE
+					</div>
 
-        <div class="row ratings">
-          <div class=" wrap">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-          <div class="text-muted">
-            <span>1,293 reviews</span>
-          </div>
-        </div>
+					<div class="row">
+						<strong> COLOR:&nbsp;</strong>
+						<span class="selectedColourName"></span>
+					</div>
+					<div class="row">
+						<div id="colours"></div>
+					</div>
 
-        <div class="row price">
-          <div class="col-sm1 wrap">
-            <h3>$14.99</h3>
-          </div>
-          <div class="text-muted">
-            <span>$17.99</span>
-            <span>26% OFF</span>
-          </div>
-        </div>
+					<div class="row size">
+						<h6>
+							Size guide
+						</h6>
+					</div>
 
-        <div class="row online">
-          ONLINE EXCLUSIVE
-        </div>
+					<div class="row fit">
+						<h6>
+							Your Custom Fit
+						</h6>
+					</div>
 
-        <div class="row">
-          <strong> COLOR:&nbsp;</strong>
-          <span class="selectedColourName"></span>
-        </div>
-        <div class="row">
-          <div id="colours"></div>
-        </div>
+					<div class="row add">
+						<div>
+							<strong id="productCount">
+								0
+							</strong>
+						</div>
+						<button
+							id="addToCart"
+							type="button"
+							class="btn btn-primary"
+							data-toggle="modal"
+							data-target="#modal"
+						>
+							Add to Cart
+						</button>
+					</div>
 
-        <div class="row size">
-          <h6>
-            Size guide
-          </h6>
-        </div>
+					<div class="details">
+						<h6>
+							DETAILS
+						</h6>
+						<div id="details"></div>
+					</div>
 
-        <div class="row fit">
-          <h6>
-            Your Custom Fit
-          </h6>
-        </div>
+					<div class="row help">
+						<h6 data-toggle="modal" data-target="#need-help">
+							Need Help?
+						</h6>
+					</div>
 
-        <div class="row add">
-          <div>
-            <strong id="productCount">
-              0
-            </strong>
-          </div>
-          <button id="addToCart" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">
-              Add to Cart
-          </button>
-        </div>
+					<div class="row">
+						<h6>
+							Shipping &amp; Returns
+						</h6>
+					</div>
+				</div>
+			</div>
 
-        <div class="details">
-          <h6>
-            DETAILS
-          </h6>
-          <div id="details">
+			<!-- quantity modal -->
+			<div class="modal fade" id="modal" tabindex="-1" role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3>
+								Please add the quantity of the item you have
+								selected
+							</h3>
+						</div>
+						<div class="modal-body">
+							<div class="flex-container">
+								<div>
+									<span class="selectedColourName"></span>
+								</div>
+								<div id="quantity-controls">x</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button
+								id="quantity-accept"
+								type="button"
+								class="btn btn-success"
+							>
+								Agree
+							</button>
+							<button
+								id="quantity-cancel"
+								type="button"
+								class="btn btn-danger"
+								data-dismiss="modal"
+							>
+								Cancel
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--  -->
 
-          </div>
-        </div>
+			<!-- need help modal -->
+			<div class="modal fade" id="need-help" tabindex="-1" role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3>Support</h3>
+						</div>
+						<div class="modal-body">
+							<div>
+								docs
+							</div>
 
-        <div class="row">
-          <h6>
-            Need Help?
-          </h6>
-        </div>
-
-
-        <div class="row">
-          <h6>
-            Shipping &amp; Returns
-          </h6>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- quantity modal -->
-    <div class="modal fade" id="modal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h3>Please add the quantity of the item you have selected</h3>
-          </div>
-          <div class="modal-body">
-            <div class="flex-container">
-              <div>
-                <span class="selectedColourName"></span>
-              </div>
-              <div id="quantity-controls">x</div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button id="quantity-accept" type="button" class="btn btn-success">Agree</button>
-            <button id="quantity-cancel" type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--  -->
-
-
-
-  </div>
-
-
-  </div>
-
-</body>
-
+							<div class="modal-footer">
+								<button
+									id="quantity-cancel"
+									type="button"
+									class="btn btn-danger"
+									data-dismiss="modal"
+								>
+									Cancel
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--  -->
+			</div>
+		</div>
+	</body>
 </html>

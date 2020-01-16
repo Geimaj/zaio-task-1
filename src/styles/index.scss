@@ -96,10 +96,25 @@ $radius: 60px;
 		button {
 			border-radius: $radius;
 			background-color: black;
-			padding: 1rem 4rem;
+			color: white;
+			padding: 1rem 3.5rem;
 			font-weight: 600;
+
+			&:hover {
+				background-color: white;
+				border: 1px solid black;
+				color: black;
+			}
 		}
 		margin-bottom: 2rem;
+	}
+
+	.help {
+		cursor: pointer;
+
+		&:hover {
+			color: rgb(50, 50, 200);
+		}
 	}
 }
 

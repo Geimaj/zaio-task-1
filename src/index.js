@@ -1,10 +1,9 @@
 import "bootstrap";
 import "./styles/index.scss";
 import "@fortawesome/fontawesome-free/js/all.js";
-import colours from "./colors";
-import ColourManager from "./ColourManager";
+import App from "./App";
 
 import renderTargets from "./render-targets";
 
-const manager = new ColourManager(colours);
-manager.render(renderTargets.colourManager);
+const app = new App(renderTargets);
+app.update();
