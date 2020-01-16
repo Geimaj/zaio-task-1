@@ -6,7 +6,8 @@ $radius: 60px;
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
 
-	h1 {
+	h1,
+	h6 {
 		font-weight: 600;
 	}
 
@@ -63,9 +64,21 @@ $radius: 60px;
 	}
 
 	.details {
-		border-top: 2px solid black;
-		border-bottom: 2px solid black;
+		border-top: 2px solid darkgray;
+		border-bottom: 2px solid darkgray;
 		padding: 1rem;
+		margin-bottom: 1rem;
+
+		#details {
+			ul {
+				margin: 0;
+				padding: 0;
+
+				li {
+					margin-left: 0;
+				}
+			}
+		}
 	}
 
 	.size,
@@ -83,15 +96,51 @@ $radius: 60px;
 		button {
 			border-radius: $radius;
 			background-color: black;
-			padding: 1rem 8rem;
-			font-weight: 500;
+			padding: 1rem 4rem;
+			font-weight: 600;
 		}
 		margin-bottom: 2rem;
 	}
+}
 
-	.modal {
-		.increment-buttons {
-			display: inline-block;
+#modal {
+	.flex-container {
+		display: flex;
+		justify-content: flex-end;
+
+		div {
+			display: flex;
+		}
+	}
+	.selectedColourName {
+		align-self: center;
+		font-size: 1.5rem;
+	}
+	#quantity-controls {
+		margin-left: 2rem;
+		div {
+			align-items: center;
+
+			span {
+				font-size: 3rem;
+				margin: 0 1.5rem;
+			}
+		}
+
+		button {
+			background-color: black;
+			box-shadow: none;
+			border: none;
+			width: $radius;
+			height: $radius;
+			border-radius: $radius;
+			color: #eee;
+			font-size: 2rem;
+			font-weight: 600;
+
+			&[disabled] {
+				background-color: lightgray;
+			}
 		}
 	}
 }

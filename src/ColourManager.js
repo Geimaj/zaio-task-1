@@ -1,7 +1,7 @@
 import Colour from "./Colour";
 import QuantityControls from "./QuantityControls";
 import renderTargets from "./render-targets";
-import $ from "jquery"; //:(
+import $ from "jquery";
 
 //element references
 const btnQuantityAccept = document.querySelector("#quantity-accept");
@@ -42,7 +42,6 @@ export default class ColourManager {
 	}
 
 	quantityAccepted() {
-		console.log("accept");
 		btnAddToCart.innerText = "Checkout now";
 		productCount.innerText = this.state.quantity;
 		//hide modal
@@ -57,6 +56,11 @@ export default class ColourManager {
 	}
 
 	quantityCanceled() {
+		//reset UI
+		details.innerHTML = "";
+		btnAddToCart.innerText = "Add to Cart";
+		productCount.innerText = 0;
+
 		this.setState({
 			quantity: 0
 		});
