@@ -11,3 +11,4 @@ app.get("*", (req, res) => {
 });
 
 app.listen(port);
+console.log("started server on port " + port);
