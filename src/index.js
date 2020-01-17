@@ -3,7 +3,7 @@ import "./styles/index.scss";
 import "@fortawesome/fontawesome-free/js/all.js";
 import App from "./App";
 
-import renderTargets from "./render-targets";
+import refs from "./refs";
 
-const app = new App(renderTargets);
+const app = new App(refs);
 app.update();

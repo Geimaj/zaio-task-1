@@ -1,5 +1,8 @@
-export default class Colour {
+import Component from "../Component";
+
+export default class Colour extends Component {
 	constructor(name) {
+		super();
 		this.name = name;
 		this.selected = false;
 	}
@@ -14,6 +17,7 @@ export default class Colour {
 		const div = document.createElement("div");
 		div.className = "colour";
 		div.style.backgroundColor = this.name;
+		//this.onclick will be overwritter by whoever calls it
 		div.onclick = () => this.onclick();
 
 		if (this.selected) {

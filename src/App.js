@@ -4,12 +4,14 @@ import colourNames from "./colors";
 import $ from "jquery";
 
 export default class App {
-	constructor(renderTargets) {
-		this.renderTargets = renderTargets;
+	constructor(refs) {
+		this.refs = refs;
 
 		//create components
-		this.colourList = new ColourList(getRandomColours(18, colourNames));
-		this.quantityControls = new QuantityControls();
+		this.components = {
+			colourList: new ColourList(getRandomColours(18, colourNames)),
+			quantityControls: new QuantityControls()
+		};
 
 		this.update = this.update.bind(this);
 		this.load = this.load.bind(this);
@@ -19,48 +21,51 @@ export default class App {
 
 	load() {
 		//attatch update handlers to components
-		this.colourList.addUpdateHandler(this.update);
-		this.quantityControls.addUpdateHandler(this.update);
+		Object.keys(this.components).forEach(component => {
+			this.components[component].addUpdateHandler(this.update);
+		});
 
 		//select first  colour
-		this.colourList.setSelected(0);
+		this.components.colourList.setSelected(0);
 
 		//attatch event handlers to modals
-		this.renderTargets.quantityModal.btnAccept.onclick = () => {
+		this.refs.quantityModal.btnAccept.onclick = () => {
 			$("#modal").modal("hide");
+			this.refs.btnAddToCart.innerText = "Checkout now";
 		};
-		this.renderTargets.quantityModal.btnCancel.onclick = () => {
+		this.refs.quantityModal.btnCancel.onclick = () => {
 			$("#modal").modal("hide");
+			this.refs.btnAddToCart.innerText = "Add to Cart";
 			//reset quantity
-			this.quantityControls.reset();
+			this.components.quantityControls.reset();
 		};
 	}
 
 	update() {
 		//render colourList
-		this.renderTargets.colourList.innerHTML = "";
-		this.renderTargets.colourList.appendChild(this.colourList.render());
+		this.refs.colourList.innerHTML = "";
+		this.refs.colourList.appendChild(this.components.colourList.render());
 
 		//render selectedColour names
-		this.renderTargets.selectedColourNames.forEach(
-			el => (el.innerText = this.colourList.getSelected().name)
+		this.refs.selectedColourNames.forEach(
+			el => (el.innerText = this.components.colourList.getSelected().name)
 		);
 
 		//render quantity controls
-		this.renderTargets.quantityControl.innerHTML = "";
-		this.renderTargets.quantityControl.appendChild(
-			this.quantityControls.render()
+		this.refs.quantityControl.innerHTML = "";
+		this.refs.quantityControl.appendChild(
+			this.components.quantityControls.render()
 		);
 
 		//update selected quantities
-		const count = this.quantityControls.count;
-		this.renderTargets.productCount.innerText = count;
+		const count = this.components.quantityControls.count;
+		this.refs.productCount.innerText = count;
 
 		//render selectedColour count times
-		this.renderTargets.details.innerHTML = "";
-		const selected = this.colourList.getSelected();
+		this.refs.details.innerHTML = "";
+		const selected = this.components.colourList.getSelected();
 		selected.selected = false;
-		this.renderTargets.details.appendChild(
+		this.refs.details.appendChild(
 			new ColourList(new Array(count).fill(selected.name)).render()
 		);
 	}

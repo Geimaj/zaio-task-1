@@ -7,5 +7,6 @@ export default {
 	quantityModal: {
 		btnAccept: document.querySelector("#quantity-accept"),
 		btnCancel: document.querySelector("#quantity-cancel")
-	}
+	},
+	btnAddToCart: document.querySelector("#addToCart")
 };
