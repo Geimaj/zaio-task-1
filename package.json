@@ -2,8 +2,7 @@
 	"private": true,
 	"scripts": {
 		"build": "webpack --mode production --env.NODE_ENV=production",
-		"watch": "webpack --watch",
-		"start": "webpack-dev-server --host=0.0.0.0 --open --hot --liveReload --env.NODE_ENV=development"
+		"dev": "webpack-dev-server --host=0.0.0.0 --open --hot --liveReload --env.NODE_ENV=development"
 	},
 	"devDependencies": {
 		"@fortawesome/fontawesome-free": "^5.12.0",
