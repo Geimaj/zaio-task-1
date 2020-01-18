@@ -2,9 +2,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
-console.log("COMMON");
-console.log("NODE_ENV: ", process.env.NODE_ENV);
-
 module.exports = {
 	entry: "./src/index.js",
 	output: {
@@ -25,7 +22,7 @@ module.exports = {
 					{
 						loader: MiniCssExtractPlugin.loader,
 						options: {
-							hmr: process.env.NODE_ENV === "development",
+							hmr: true,
 							reloadAll: true
 						}
 					},
