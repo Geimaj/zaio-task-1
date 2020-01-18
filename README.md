@@ -1,9 +1,9 @@
-Zaio bootcamp - Phase 1
+# Zaio bootcamp - Phase 1
 
-install dependencies
+install dependencies:
 
-``` npm install ```
+`yarn`
 
-run project
+run project:
 
-``` npm run start ```
+`yarn run dev`
