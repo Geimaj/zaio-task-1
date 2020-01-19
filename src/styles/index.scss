@@ -50,13 +50,10 @@ $shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			margin: 0.5rem;
 			border-radius: $radius;
 			cursor: pointer;
-			transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 			// shared
 			&.selected,
 			&:hover {
-				// box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-				// 	0 6px 20px 0 rgba(0, 0, 0, 0.19);
 				box-shadow: $shadow;
 			}
 
@@ -80,8 +77,9 @@ $shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	}
 
 	.details {
-		border-top: 2px solid darkgray;
-		border-bottom: 2px solid darkgray;
+		$border: 1px solid darkgray;
+		border-top: $border;
+		border-bottom: $border;
 		padding: 1rem;
 		margin-bottom: 1rem;
 
