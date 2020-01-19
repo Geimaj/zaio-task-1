@@ -17,7 +17,7 @@ export default class Colour extends Component {
 		const div = document.createElement("div");
 		div.className = "colour";
 		div.style.backgroundColor = this.name;
-		//this.onclick will be overwritter by whoever calls it
+		//this.onclick will be overwritten
 		div.onclick = () => this.onclick();
 
 		if (this.selected) {
@@ -28,6 +28,7 @@ export default class Colour extends Component {
 		return li;
 	}
 
+	//will be overwritten
 	onclick() {
 		console.log("click! " + this.name);
 	}
